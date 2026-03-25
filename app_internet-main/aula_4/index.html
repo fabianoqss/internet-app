@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portal de notícias com as últimas notícias de tecnologia, esportes e cultura.">
+  <title>Portal de Notícias</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <a href="#main-content" class="skip-link">Pular para o conteúdo</a>
+
+  <header>
+    <h1>Portal de Notícias</h1>
+    <nav aria-label="Navegação principal">
+      <ul>
+        <li><a href="#" aria-current="page">Home</a></li>
+        <li><a href="#">Tecnologia</a></li>
+        <li><a href="#">Esportes</a></li>
+        <li><a href="#">Cultura</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main-content">
+
+    <article>
+      <figure>
+        <picture>
+          <source media="(min-width: 600px)" srcset="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&auto=format&fit=crop">
+          <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=400&auto=format&fit=crop" alt="Médico analisando imagens em monitor com auxílio de inteligência artificial" width="800" height="300" loading="lazy">
+        </picture>
+        <figcaption>IA aplicada ao diagnóstico médico. Foto: Unsplash</figcaption>
+      </figure>
+      <h2>Inteligência Artificial Transforma a Medicina</h2>
+      <p>Novos algoritmos estão ajudando médicos a diagnosticar doenças com precisão nunca antes vista.</p>
+      <a href="#" aria-label="Leia mais sobre IA na Medicina">Leia mais</a>
+      <section>
+        <h3>Publicado em</h3>
+        <time datetime="2025-03-10">10 de março de 2025</time>
+      </section>
+    </article>
+
+    <section aria-labelledby="video-titulo">
+      <h2 id="video-titulo">Vídeo: IA no Diagnóstico de Câncer</h2>
+      <div class="video-wrapper">
+        <video controls preload="metadata" poster="https://images.unsplash.com/photo-1559757175-0eb30cd8c063?w=800&auto=format&fit=crop" aria-label="Vídeo sobre inteligência artificial no diagnóstico de câncer">
+          <track kind="captions" srclang="pt" label="Português" src="legendas.vtt" default>
+          <p>Seu navegador não suporta vídeo. <a href="#">Baixar o vídeo</a>.</p>
+        </video>
+      </div>
+    </section>
+
+    <section aria-labelledby="audio-titulo">
+      <h2 id="audio-titulo">Podcast: Futebol em Debate</h2>
+      <audio controls preload="metadata" aria-label="Podcast sobre a final do campeonato de futebol">
+        <p>Seu navegador não suporta áudio. <a href="#">Baixar o episódio</a>.</p>
+      </audio>
+    </section>
+
+    <article>
+      <h2>Final do Campeonato de Futebol Termina em Empate</h2>
+      <p>A grande final terminou em empate por 2 a 2, levando a decisão para os pênaltis.</p>
+      <a href="#" aria-label="Leia mais sobre a Final do Campeonato">Leia mais</a>
+      <section>
+        <h3>Publicado em</h3>
+        <time datetime="2025-03-09">9 de março de 2025</time>
+      </section>
+    </article>
+
+    <section aria-labelledby="faq-titulo">
+      <h2 id="faq-titulo">Perguntas Frequentes</h2>
+      <details>
+        <summary>O que é o Festival de Cinema 2025?</summary>
+        <div class="details-body">O maior festival de cinema da América Latina, com mais de 200 filmes de 45 países.</div>
+      </details>
+      <details>
+        <summary>Como me inscrever como voluntário?</summary>
+        <div class="details-body">As inscrições estarão abertas até 31 de março de 2025 pelo site oficial.</div>
+      </details>
+    </section>
+
+    <section aria-labelledby="stats-titulo">
+      <h2 id="stats-titulo">Popularidade das Categorias</h2>
+      <div class="meter-row">
+        <label for="meter-tec">Tecnologia (87%)</label>
+        <meter id="meter-tec" value="87" min="0" max="100" low="30" high="70" optimum="100" title="87%"></meter>
+      </div>
+      <div class="meter-row">
+        <label for="meter-esp">Esportes (72%)</label>
+        <meter id="meter-esp" value="72" min="0" max="100" low="30" high="70" optimum="100" title="72%"></meter>
+      </div>
+      <div class="meter-row">
+        <label for="meter-cul">Cultura (55%)</label>
+        <meter id="meter-cul" value="55" min="0" max="100" low="30" high="70" optimum="100" title="55%"></meter>
+      </div>
+    </section>
+
+    <section aria-labelledby="newsletter-titulo">
+      <h2 id="newsletter-titulo">Assine a Newsletter</h2>
+
+      <div class="alert alert-success" id="news-ok" role="alert" aria-live="polite">Inscrição realizada com sucesso!</div>
+      <div class="alert alert-error" id="news-err" role="alert" aria-live="polite">Por favor, corrija os erros antes de continuar.</div>
+
+      <form id="form-newsletter" novalidate aria-labelledby="newsletter-titulo">
+
+        <div class="form-group">
+          <label for="nome">Nome completo *</label>
+          <input type="text" id="nome" name="nome" required minlength="3" maxlength="80" placeholder="Seu nome" autocomplete="name" aria-describedby="nome-hint" aria-required="true">
+          <span class="form-hint" id="nome-hint">Mínimo 3 caracteres.</span>
+        </div>
+
+        <div class="form-group">
+          <label for="email">E-mail *</label>
+          <input type="email" id="email" name="email" required placeholder="seu@email.com" autocomplete="email" aria-required="true">
+        </div>
+
+        <div class="form-group">
+          <label for="data-nasc">Data de nascimento</label>
+          <input type="date" id="data-nasc" name="data_nasc" min="1920-01-01" max="2010-12-31" autocomplete="bday">
+        </div>
+
+        <div class="form-group">
+          <label for="telefone">Telefone</label>
+          <input type="tel" id="telefone" name="telefone" placeholder="(11) 99999-9999" pattern="^(\(?\d{2}\)?\s?)?(9\d{4}|\d{4})-?\d{4}$" autocomplete="tel" aria-describedby="tel-hint">
+          <span class="form-hint" id="tel-hint">Formato: (11) 99999-9999</span>
+        </div>
+
+        <div class="form-group">
+          <label for="frequencia">Frequência de envio</label>
+          <select id="frequencia" name="frequencia">
+            <option value="" disabled selected>Selecione…</option>
+            <option value="diario">Diário</option>
+            <option value="semanal">Semanal</option>
+            <option value="mensal">Mensal</option>
+          </select>
+        </div>
+
+        <fieldset>
+          <legend>Categorias de interesse</legend>
+          <div class="checkbox-row">
+            <label><input type="checkbox" name="categoria" value="tecnologia"> Tecnologia</label>
+            <label><input type="checkbox" name="categoria" value="esportes"> Esportes</label>
+            <label><input type="checkbox" name="categoria" value="cultura"> Cultura</label>
+            <label><input type="checkbox" name="categoria" value="ciencia"> Ciência</label>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Formato preferido</legend>
+          <div class="radio-row">
+            <label><input type="radio" name="formato" value="resumo"> Resumo rápido</label>
+            <label><input type="radio" name="formato" value="completo"> Artigo completo</label>
+            <label><input type="radio" name="formato" value="manchetes"> Só manchetes</label>
+          </div>
+        </fieldset>
+
+        <div class="form-group">
+          <label for="prioridade">Nível de interesse: <output for="prioridade" id="prioridade-val">5</output>/10</label>
+          <input type="range" id="prioridade" name="prioridade" min="1" max="10" value="5">
+        </div>
+
+        <button type="submit">Assinar</button>
+        <button type="reset">Limpar</button>
+      </form>
+    </section>
+
+    <section aria-labelledby="contato-titulo">
+      <h2 id="contato-titulo">Fale Conosco</h2>
+
+      <div class="alert alert-success" id="contato-ok" role="alert" aria-live="polite">Mensagem enviada com sucesso!</div>
+
+      <form id="form-contato" novalidate aria-labelledby="contato-titulo">
+
+        <div class="form-group">
+          <label for="contato-nome">Nome *</label>
+          <input type="text" id="contato-nome" name="contato_nome" required autocomplete="name" aria-required="true">
+        </div>
+
+        <div class="form-group">
+          <label for="contato-email">E-mail *</label>
+          <input type="email" id="contato-email" name="contato_email" required autocomplete="email" aria-required="true">
+        </div>
+
+        <div class="form-group">
+          <label for="assunto">Assunto *</label>
+          <input type="text" id="assunto" name="assunto" required list="assuntos-lista">
+          <datalist id="assuntos-lista">
+            <option value="Sugestão de pauta">
+            <option value="Correção de notícia">
+            <option value="Parceria">
+            <option value="Outro">
+          </datalist>
+        </div>
+
+        <div class="form-group">
+          <label for="mensagem">Mensagem *</label>
+          <textarea id="mensagem" name="mensagem" rows="5" required minlength="20" maxlength="1000" aria-describedby="msg-count" aria-required="true"></textarea>
+          <span class="form-hint" id="msg-count" aria-live="polite">0 / 1000</span>
+        </div>
+
+        <div class="form-group">
+          <label for="avaliacao">Como avalia nosso portal?</label>
+          <select id="avaliacao" name="avaliacao">
+            <option value="" disabled selected>Selecione…</option>
+            <option value="5">Excelente</option>
+            <option value="4">Bom</option>
+            <option value="3">Regular</option>
+            <option value="2">Ruim</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="arquivo">Anexar arquivo (opcional)</label>
+          <input type="file" id="arquivo" name="arquivo" accept=".jpg,.jpeg,.png,.pdf" aria-describedby="arquivo-hint">
+          <span class="form-hint" id="arquivo-hint">JPG, PNG ou PDF. Máximo 5 MB.</span>
+        </div>
+
+        <div class="form-group">
+          <label class="lgpd-label">
+            <input type="checkbox" name="lgpd" required id="lgpd" aria-required="true">
+            Li e aceito a <a href="#">Política de Privacidade</a> *
+          </label>
+        </div>
+
+        <button type="submit">Enviar mensagem</button>
+        <button type="reset">Cancelar</button>
+      </form>
+    </section>
+
+    <aside aria-label="Conteúdo relacionado">
+      <h2>Mais lidas</h2>
+      <ul>
+        <li><a href="#">IA no diagnóstico de câncer</a></li>
+        <li><a href="#">Copa do Mundo 2026</a></li>
+        <li><a href="#">Festival de Cinema 2025</a></li>
+      </ul>
+    </aside>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Portal de Notícias &mdash; <a href="#">Contato</a></p>
+  </footer>
+
+  <script>
+    const textarea = document.getElementById('mensagem');
+    const msgCount = document.getElementById('msg-count');
+    if (textarea) {
+      textarea.addEventListener('input', () => {
+        msgCount.textContent = `${textarea.value.length} / 1000`;
+      });
+    }
+
+    const range = document.getElementById('prioridade');
+    const rangeVal = document.getElementById('prioridade-val');
+    if (range) {
+      range.addEventListener('input', () => { rangeVal.textContent = range.value; });
+    }
+
+    document.getElementById('form-newsletter').addEventListener('submit', (e) => {
+      e.preventDefault();
+      document.getElementById('news-ok').classList.remove('visible');
+      document.getElementById('news-err').classList.remove('visible');
+      if (e.target.checkValidity()) {
+        document.getElementById('news-ok').classList.add('visible');
+        e.target.reset();
+        rangeVal.textContent = '5';
+      } else {
+        e.target.reportValidity();
+        document.getElementById('news-err').classList.add('visible');
+      }
+    });
+
+    document.getElementById('form-contato').addEventListener('submit', (e) => {
+      e.preventDefault();
+      document.getElementById('contato-ok').classList.remove('visible');
+      if (e.target.checkValidity()) {
+        document.getElementById('contato-ok').classList.add('visible');
+        e.target.reset();
+        msgCount.textContent = '0 / 1000';
+      } else {
+        e.target.reportValidity();
+      }
+    });
+  </script>
+
+</body>
+
+</html>
